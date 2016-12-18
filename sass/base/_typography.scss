@@ -1,0 +1,80 @@
+//Variables Configuration
+@import 'https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:300';
+
+$base-color: #616161;
+$quiet-color: lighten($base-color, 20%);
+$loud-color: darken($base-color, 50%);
+$brand-color-1: #fc5c59; //red
+$brand-color-2: #00bcff; //blue
+$brand-color-3: #56c34b; //green
+
+//font family default
+$font-family-default: "Montserrat";
+$font-family-secondary: Roboto;
+$font-weight-default: 400;
+$font-size-default: 16px !default;
+$font-color-default: $base-color;
+
+//font family header
+$font-family-header-default: "Montserrat";
+$font-weight-header-default: 600;
+$font-size-header-default: 200%;
+$font-color-header-default: darken($font-color-default, 50%);
+
+//## Line height configuration
+$line-height-variable:	1.666666667 !default; // 20/14
+//** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
+$line-height-default:  floor(($font-size-default * $line-height-variable)) !default; // ~20px
+
+//Header Configuration
+//header size setting
+@each $h in h1, h2, h3, h4, h5, h6 {
+    #{$h} {
+      font-size: $font-size-header-default;
+      }
+
+     $font-size-header-default: $font-size-header-default - 20%;
+}
+
+body {
+   color: $font-color-default;
+   font-size: $font-size-default;
+   font-family: $font-family-default;
+   font-weight: $font-weight-default;
+   line-height: $line-height-default;
+}
+
+//font styles
+.sec-font { font-family: $font-family-secondary; }
+.italic { font-style: italic; }
+.bold   { font-weight: 700; @extend .loud; }
+.underline { text-decoration: underline;}
+
+//font technical colors
+.quiet { color: $quiet-color; }
+.loud  { color: $loud-color; }
+.red { color: $brand-color-1; }
+.blue { color: $brand-color-2; }
+.green { color: $brand-color-3; }
+.wht { color: white !important; opacity: 0.9; }
+.left { float: left !important; }
+.right { float: right !important; }
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.mrg-ctr { margin: auto; }
+.mrg-btm-30 { margin-bottom: 30px; }
+
+//Pre-Setting
+i, em { @extend .italic; }
+b, strong { @extend .bold; }
+
+h1, .h1 { @extend .h1; margin: 1em 0 0.5em; }
+h2, .h2 { @extend .h2; margin: 1em 0 0.5em; }
+h3, .h3 { @extend .h3; margin: 1em 0 0.5em; }
+h4, .h4 { @extend .h4; margin: 1em 0 0.5em; }
+h5, .h5 { @extend .h5; margin: 1em 0 0.5em; }
+h6, .h6 { @extend .h6; margin: 1em 0 0.5em; }
+
+ul, ol { margin: 0; padding: 0; list-style: none;}
+
+a { text-decoration: none; color: $base-color; outline: 0;}

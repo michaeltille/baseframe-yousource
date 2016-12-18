@@ -1,0 +1,39 @@
+@media (min-width: 320px) and (max-width: 705px) {
+    .line {
+        h4 {
+            font-size: 75%;
+            line-height: 1.5;
+        }
+    }
+
+    .our-intro {
+        min-height: 45vh;
+        height: auto;
+
+        .desc {
+            h1 {
+                font-size: 170%;
+            }
+
+            h4 {
+                font-size: 85%;
+                line-height: 1.5;
+            }
+        }
+    }
+
+    .our-products {
+        h2 {
+            font-size: 170%;
+        }
+    }
+
+    .relationship {
+        min-height: 80vh;
+        height: auto;
+
+        h2 {
+            margin-left: 15px;
+        }
+    }
+}

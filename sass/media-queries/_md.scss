@@ -1,0 +1,180 @@
+/* Portrait and Landscape */
+@media
+  (min-width: 320px)
+  and (max-width: 992px) {
+
+    .container {
+        width: 100%;
+    }
+
+    .base-header {
+        .showmenu {
+            display: block;
+        }
+
+        .menu {
+            display: none;
+        }
+
+        .toggle-menu {
+            display: inline-block;
+            width: 120%;
+            margin: 0 -10%;
+
+
+            ul {
+                top: 0;
+                float: none !important;
+                text-align: center;
+
+                li {
+                    float: none !important;
+
+                    a {
+                        padding: 10px 0;
+                        display: inline-block;
+                        width: 100%;
+                        background-color: #fff;
+                        border-bottom: 1px solid rgba(0,0,0,.1);
+                    }
+                }
+            }
+        }
+
+        .showmenu {
+            top: 32px;
+        }
+    }
+
+    .our-intro {
+        min-height: 55vh;
+        height: auto;
+
+        .desc {
+            margin-top: 3%;
+
+            h1 {
+                font-size: 200%;
+                span {
+                    margin-top: 2%;
+                }
+            }
+        }
+    }
+
+    .our-products {
+        padding: 0;
+
+        section {
+            padding-right: 40px;    
+            min-height: 40vh;
+            background: rgba(255,255,255,1);
+            background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(237,237,237,1) 100%);
+            background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(100%, rgba(237,237,237,1)));
+            background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(237,237,237,1) 100%);
+            background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(237,237,237,1) 100%);
+            background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(237,237,237,1) 100%);
+            background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(237,237,237,1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=0 );
+
+            &.trg-mgc:before, &.trg-mgc:after {
+                display: none;
+            }
+
+            .mobile-help-arrow {
+                display: block;
+            }
+        }
+
+        h2 {
+            font-size: 200%;
+            margin-left: 15px;
+
+            span {
+                display: block;
+                margin-top: 10px;
+                font-size: 60%;
+            }
+        }
+    }
+
+    .relationship {
+        min-height: 55vh;
+        height: auto;
+
+        .container {
+            position: relative;
+            top: 40px;
+            transform: none;
+        }
+
+        .right {
+            float: none !important;
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 200%;
+        }
+    }
+
+    .line {
+        margin-left: 15px;
+
+        h4 {
+            font-size: 90%;
+            line-height: 1.5;
+        }
+    }
+
+
+    .button {
+        &.forge {
+            position: relative;
+            border: 0;
+            left: 44px;
+            margin-top: 20px;
+
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    .remodal {
+        overflow: hidden;
+
+        .remodal-close {
+            right: 0;
+            left: auto;
+            z-index: 1;
+            color: white;
+        }
+        .remodal-hold {
+            &:after {
+                content: '';
+                border-left: 60px solid transparent;
+                border-right: 0px solid transparent;
+                border-top: 60px solid $brand-color-3;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+
+        .thank-you {
+            .line {
+                display: inline-block;
+                margin: 0;
+
+                h4 {
+                    font-size: 100%;
+                }
+            }
+        }
+
+        .line {
+            display: none;
+        }
+    }
+}

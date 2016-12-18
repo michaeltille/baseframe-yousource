@@ -1,0 +1,39 @@
+.base-header {
+    background-color: lighten($base-color, 57%);
+    position: relative;
+
+    h1 { @extend .left; margin: 0 !important; }
+
+    ul {
+        @extend .right;
+        position: relative;
+        top: 55px;
+        font-size: 85%;
+
+        li {
+            @extend .left;
+            margin: 0 6px;
+
+            a {
+                color: lighten($base-color, 20%);
+            }
+        }
+    }
+
+    .toggle-menu {
+        display: none;
+    }
+
+    .showmenu {
+        display: none;
+        width: 40px;
+        height: 40px;
+        background: transparent url('../img/iconmonstr-menu-1-240.png') no-repeat left top;
+        background-size: contain;
+        float: right;
+        text-indent: -9999px;
+        position: relative;
+        top: 55px;
+        right: 15px;
+    }
+}

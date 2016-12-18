@@ -1,0 +1,121 @@
+.our-intro {
+    background: #fff url('../img/bg-hero.jpg') no-repeat scroll center;
+    border-top: 2px solid $brand-color-2;
+    @extend .cover-dv;
+
+    .desc {
+        @extend .wht;
+        text-align: center;
+        margin-top: 8%;
+
+        h1 {
+            line-height: 1;
+            font-size: 300%;
+            text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+
+            span {
+                font-size: 50%;
+                line-height: 1.2;
+                display: block;
+                width: 70%;
+                margin: 5% auto 0;
+            }
+        }
+
+        h4 {
+            line-height: 26px;
+            font-weight: normal;
+            text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+            @extend .sec-font;
+        }
+    }
+}
+
+.our-products {
+    padding: 40px 0 50px;
+
+    section {
+        min-height: 550px;
+        position: relative;
+
+        .mobile-help-arrow {
+            display: none;
+        }
+
+        &:nth-child(2) {
+            h2 {
+                margin-top: 5%;
+            }
+        }
+
+        &.trg-mgc {
+
+            &:before, &:after {
+                @extend .border-magic;
+                content: '';
+                height: 550px;
+                width: 1px;
+                position: absolute;
+                top: 0;
+                left: -10px;
+            }
+
+            &:after {
+                left: auto;
+                right: 5px;
+            }
+        }
+    }
+
+    h2 {
+        font-size: 230%;
+        line-height: 1;
+
+        span {
+            color: $base-color;
+            font-size: 40%;
+            line-height: 1.3;
+            display: inline-block;
+            margin-top: 5%;
+            @extend .sec-font;
+            opacity: .7;
+        }
+    }
+
+    .button {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        &.arrow:before {
+            content: '\007C';
+            width: 5px;
+            height: 20px;
+            position: absolute;
+            top: -14px;
+            background: #fff;
+            font-size: 120%;
+            left: 37%;
+            padding: 0 10px;
+        }
+    }
+}
+
+.relationship {
+    background: #fff url('../img/bg-relationships.jpg') no-repeat scroll center;
+    border-top: 3px solid $brand-color-1;
+    @extend .cover-dv;
+
+    .container {
+        @include vertical-align;
+    }
+
+    h2 {
+        font-size: 330%;
+        line-height: 1.2;
+        font-weight: 400;
+        margin: 10px 0;
+        text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    }
+}
